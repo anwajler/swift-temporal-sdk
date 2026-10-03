@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import struct GRPCCore.Metadata
 
 extension BridgeClient {
@@ -45,3 +46,5 @@ extension BridgeClient {
         }
     }
 }
+
+#endif

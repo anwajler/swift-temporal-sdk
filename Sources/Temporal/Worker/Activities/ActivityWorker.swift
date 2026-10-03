@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import AsyncAlgorithms
 package import Logging
 import SwiftProtobuf
@@ -558,3 +559,5 @@ extension ActivityWorker.Implementation {
         }
     }
 }
+
+#endif

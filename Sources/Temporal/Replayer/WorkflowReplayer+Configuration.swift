@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 public import Logging
 
 extension WorkflowReplayer {
@@ -65,3 +66,5 @@ extension WorkflowReplayer {
         }
     }
 }
+
+#endif

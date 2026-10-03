@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 #if GRPCNIOTransport
 public import GRPCNIOTransportCore
 public import GRPCNIOTransportHTTP2Posix
@@ -57,4 +58,6 @@ extension TemporalWorker {
         )
     }
 }
+#endif
+
 #endif

@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 public import Configuration
 import Foundation
 
@@ -523,3 +524,5 @@ extension TemporalWorker {
         }
     }
 }
+
+#endif

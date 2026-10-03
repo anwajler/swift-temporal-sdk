@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 /// Replays workflow histories to verify workflow code compatibility.
 ///
 /// ``WorkflowReplayer`` is used for testing workflow code changes against recorded
@@ -107,3 +108,5 @@ public final class WorkflowReplayer: Sendable {
         return results
     }
 }
+
+#endif

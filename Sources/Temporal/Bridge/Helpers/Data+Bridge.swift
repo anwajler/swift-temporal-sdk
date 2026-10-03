@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 import Foundation
 
@@ -49,3 +50,5 @@ extension Array where Element == UInt8 {
         }
     }
 }
+
+#endif

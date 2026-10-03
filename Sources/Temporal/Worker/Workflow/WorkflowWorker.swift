@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 package import Logging
 import SwiftProtobuf
 
@@ -288,3 +289,5 @@ package final class WorkflowWorker<BridgeWorker: BridgeWorkerProtocol>: Workflow
         try await self.worker.completeWorkflowActivation(completion: completion)
     }
 }
+
+#endif

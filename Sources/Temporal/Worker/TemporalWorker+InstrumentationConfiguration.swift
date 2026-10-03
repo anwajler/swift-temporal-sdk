@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 public import Configuration
 
 extension TemporalWorker.Configuration {
@@ -71,3 +72,5 @@ extension TemporalWorker.Configuration {
         }
     }
 }
+
+#endif

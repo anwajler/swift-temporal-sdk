@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 
 extension Array where Element == String {
@@ -58,3 +59,5 @@ extension TemporalCoreByteArrayRefArray {
         return buffer.map { String(byteArrayRef: $0) }
     }
 }
+
+#endif

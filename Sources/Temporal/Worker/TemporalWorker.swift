@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 public import GRPCCore
 import GRPCNIOTransportHTTP2Posix
 import GRPCOTelTracingInterceptors
@@ -382,3 +383,5 @@ where
         }
     }
 }
+
+#endif

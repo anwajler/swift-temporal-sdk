@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 import Foundation
 internal import SwiftProtobuf
@@ -246,3 +247,5 @@ package final class BridgeReplayer: Sendable {
         }
     }
 }
+
+#endif

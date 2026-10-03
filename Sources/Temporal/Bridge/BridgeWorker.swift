@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 import Foundation
 import GRPCCore
@@ -289,3 +290,5 @@ package final class BridgeWorker: BridgeWorkerProtocol {
         }
     }
 }
+
+#endif

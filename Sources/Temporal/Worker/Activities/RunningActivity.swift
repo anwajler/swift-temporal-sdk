@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Logging
 import Synchronization
 
@@ -127,3 +128,5 @@ extension ActivityWorker {
         }
     }
 }
+
+#endif

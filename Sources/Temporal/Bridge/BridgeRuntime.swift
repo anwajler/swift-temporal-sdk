@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 import Logging
 
@@ -43,3 +44,5 @@ package final class BridgeRuntime: Sendable {
         temporal_core_runtime_free(self.runtime)
     }
 }
+
+#endif

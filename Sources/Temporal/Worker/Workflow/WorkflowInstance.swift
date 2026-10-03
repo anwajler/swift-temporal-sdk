@@ -63,6 +63,7 @@ struct WorkflowInstance: Sendable {
     /// The workflow instance logger.
     private let logger: Logger
 
+    #if canImport(Bridge)
     init<WorkflowWorker: WorkflowWorkerProtocol>(
         workflowWorker: WorkflowWorker,
         taskQueue: String,
@@ -96,6 +97,7 @@ struct WorkflowInstance: Sendable {
         self.outboundInterceptors = outboundInterceptors
         self.logger = logger
     }
+    #endif
 
     func run<Workflow: WorkflowDefinition>(
         workflowType: Workflow.Type,

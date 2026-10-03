@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 public import Logging
 
@@ -138,3 +139,5 @@ private func logCallback(level: TemporalCoreForwardedLogLevel, log: OpaquePointe
     let message = temporal_core_forwarded_log_message(log)
     logger.log(level: level.level, "\(String(byteArrayRef: message))")
 }
+
+#endif

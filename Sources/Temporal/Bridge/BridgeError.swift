@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 import Foundation
 
@@ -37,3 +38,5 @@ struct BridgeError: Error, Hashable {
         }
     }
 }
+
+#endif

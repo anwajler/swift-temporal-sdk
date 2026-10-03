@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 
 extension String {
@@ -42,3 +43,5 @@ extension String {
         }
     }
 }
+
+#endif
