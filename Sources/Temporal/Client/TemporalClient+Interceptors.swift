@@ -30,12 +30,13 @@ extension TemporalClient {
 
 extension TemporalClient {
     static func grpcClientInterceptors(serverHostname: String) -> [any GRPCCore.ClientInterceptor] {
+        // Request metadata carries the API key in `authorization`, so it must stay out of spans and logs.
         [
             ClientOTelTracingInterceptor(
                 serverHostname: serverHostname,
                 networkTransportMethod: "tcp",
                 traceEachMessage: true,
-                includeRequestMetadata: true,
+                includeRequestMetadata: false,
                 includeResponseMetadata: true
             ),
             ClientOTelMetricsInterceptor(
@@ -45,7 +46,7 @@ extension TemporalClient {
             ClientOTelLoggingInterceptor(
                 serverHostname: serverHostname,
                 networkTransportMethod: .tcp,
-                includeRequestMetadata: true,
+                includeRequestMetadata: false,
                 includeResponseMetadata: true
             ),
         ]

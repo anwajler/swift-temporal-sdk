@@ -184,12 +184,13 @@ where
     ) {
         let client = GRPCClient(
             transport: transport,
+            // Request metadata carries the API key in `authorization`, so it must stay out of spans and logs.
             interceptors: [
                 ClientOTelTracingInterceptor(
                     serverHostname: configuration.instrumentation.serverHostname,
                     networkTransportMethod: "tcp",
                     traceEachMessage: true,
-                    includeRequestMetadata: true,
+                    includeRequestMetadata: false,
                     includeResponseMetadata: true
                 ),
                 ClientOTelMetricsInterceptor(
@@ -199,7 +200,7 @@ where
                 ClientOTelLoggingInterceptor(
                     serverHostname: configuration.instrumentation.serverHostname,
                     networkTransportMethod: .tcp,
-                    includeRequestMetadata: true,
+                    includeRequestMetadata: false,
                     includeResponseMetadata: true
                 ),
             ]
