@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 
 extension TemporalCoreSlotSupplier {
@@ -32,3 +33,5 @@ extension TemporalCoreSlotSupplier {
         self = supplier
     }
 }
+
+#endif

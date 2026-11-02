@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 import GRPCCore
 import Logging
@@ -304,3 +305,5 @@ package struct BridgeClient: ~Copyable, Sendable {
         temporal_core_client_free(self.client)
     }
 }
+
+#endif

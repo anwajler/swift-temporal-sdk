@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 public import GRPCCore
 import GRPCOTelTracingInterceptors
 import GRPCServiceLifecycle
@@ -420,3 +421,5 @@ where
         }
     }
 }
+
+#endif

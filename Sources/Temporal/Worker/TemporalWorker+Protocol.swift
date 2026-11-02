@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 package import GRPCCore
 package import ServiceLifecycle
 
@@ -71,3 +72,5 @@ extension GenericTemporalWorker: TemporalWorkerProtocol {
         )
     }
 }
+
+#endif

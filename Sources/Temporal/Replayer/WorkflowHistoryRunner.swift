@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Logging
 internal import SwiftProtobuf
 
@@ -288,3 +289,5 @@ package final class ReplayBridgeWorker: BridgeWorkerProtocol {
         }
     }
 }
+
+#endif

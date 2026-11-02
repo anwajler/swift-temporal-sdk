@@ -12,9 +12,12 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 
 extension TemporalCoreByteArrayRef {
     /// `nil` representation in a `ByteArrayRef`.
     static var `nil`: TemporalCoreByteArrayRef { TemporalCoreByteArrayRef(data: nil, size: 0) }
 }
+
+#endif

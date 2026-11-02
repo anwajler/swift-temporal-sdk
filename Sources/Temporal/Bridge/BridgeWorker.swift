@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 import GRPCCore
 internal import SwiftProtobuf
@@ -294,3 +295,5 @@ package final class BridgeWorker: BridgeWorkerProtocol {
         }
     }
 }
+
+#endif

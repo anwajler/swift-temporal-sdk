@@ -10,7 +10,7 @@ business logic in a scalable and resilient way.
 
 - 🚀 Swift package for authoring Temporal workflows and activities
 - 📦 Compatible with Swift Package Manager
-- 📱 Supports Linux (including the static SDK), macOS, iOS 
+- 📱 Supports Linux (including the static SDK), macOS, iOS, and the client on visionOS 2+
 - 🔧 Built with Swift 6.2.3 and Xcode 26.2+
 
 🔗 Jump to:
@@ -74,6 +74,14 @@ business processes such as:
 - Swift version: Swift 6.2+
 
 To install/upgrade Swift, see https://www.swift.org/install/
+
+### visionOS client support
+
+`TemporalClient` and the generated service API use Swift gRPC and are available on
+visionOS 2 and later. Worker execution, workflow replay, and the local test server
+require the native `Bridge` runtime, which is not distributed for visionOS. These
+runtime implementations are compiled only where `Bridge` is available; their
+behavior on supported worker platforms is unchanged.
 
 ### Adding as a dependency
 

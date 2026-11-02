@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 package import Logging
 
 /// A log handler that drops records while the workflow is replaying.
@@ -73,3 +74,5 @@ package struct ReplayAwareLogHandler: LogHandler {
         self.underlying.log(event: event)
     }
 }
+
+#endif

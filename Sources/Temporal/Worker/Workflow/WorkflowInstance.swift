@@ -61,6 +61,7 @@ struct WorkflowInstance: Sendable {
     /// The workflow outbound interceptor chain.
     private let outboundInterceptors: [any WorkflowOutboundInterceptor]
 
+    #if canImport(Bridge)
     init<WorkflowWorker: WorkflowWorkerProtocol>(
         workflowWorker: WorkflowWorker,
         taskQueue: String,
@@ -93,6 +94,7 @@ struct WorkflowInstance: Sendable {
         self.implementation = .init(interceptors: inboundInterceptors, executor: self.executor)
         self.outboundInterceptors = outboundInterceptors
     }
+    #endif
 
     func run<Workflow: WorkflowDefinition>(
         workflowType: Workflow.Type,

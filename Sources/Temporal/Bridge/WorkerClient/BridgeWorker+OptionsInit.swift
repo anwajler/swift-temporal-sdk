@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 
 extension BridgeWorker {
@@ -170,3 +171,5 @@ extension TemporalWorker.Configuration.PollerBehavior {
         }
     }
 }
+
+#endif

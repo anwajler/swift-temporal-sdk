@@ -12,6 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Bridge)
 import Bridge
 
 package struct BridgeTestServer: ~Copyable, Sendable {
@@ -328,3 +329,5 @@ package struct BridgeTestServer: ~Copyable, Sendable {
         temporal_core_ephemeral_server_free(self.serverPointer)
     }
 }
+
+#endif
